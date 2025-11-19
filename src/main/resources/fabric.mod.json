@@ -33,6 +33,7 @@
       "environment": "client"
     }
   ],
+  "accessWidener": "noruncommandconfirm.accesswidener",
 
   "depends": {
     "fabricloader": ">=${loader_version}",

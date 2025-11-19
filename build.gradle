@@ -20,7 +20,7 @@ loom {
         }
     }
 
-    accessWidenerPath = file('src/client/resources/noruncommandconfirm.accesswidener')
+    accessWidenerPath = file('src/main/resources/noruncommandconfirm.accesswidener')
 }
 
 
@@ -45,7 +45,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 
-processClientResources {
+processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
