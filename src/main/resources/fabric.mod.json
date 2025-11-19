@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "noruncommandconfirm",
+  "version": "${version}",
+
+  "name": "NoRunCommandConfirm",
+  "description": "No RunCommand Confirm in game.",
+  "authors": [
+    {
+      "name": "MangoFanFanw",
+      "contact": {
+        "email": "mangofanfanw@icloud.com"
+      }
+    }
+  ],
+  "contact": {
+    "homepage": "https://fanfan.moe/",
+    "sources": "https://github.com/mangofanfan/NoRunCommandConfirm-MinecraftMod",
+    "issues": "https://github.com/mangofanfan/NoRunCommandConfirm-MinecraftMod/issues"
+  },
+
+  "license": "MIT",
+  "icon": "assets/noruncommandconfirm/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["cn.mangofanfan.noruncommandconfirm.client.NoruncommandconfirmClient"]
+  },
+
+  "mixins": [
+    {
+      "config": "noruncommandconfirm.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
