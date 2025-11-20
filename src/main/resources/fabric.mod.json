@@ -36,8 +36,8 @@
   "accessWidener": "noruncommandconfirm.accesswidener",
 
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": "*",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": ">=1.21.9"
   }
 }
