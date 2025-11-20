@@ -25,7 +25,7 @@ public abstract class ClientPlayNetworkHandlerMixin extends ClientCommonNetworkH
     public abstract ClientPlayNetworkHandler.CommandRunResult parseCommand(String command);
 
     @Shadow
-    public abstract void openConfirmRunCommandScreen(String command, String message, @Nullable Screen afterActionScreen);
+    public abstract void openConfirmCommandScreen(String command, String message, @Nullable Screen afterActionScreen);
 
     @Inject(method = "runClickEventCommand", at = @At("HEAD"), cancellable = true)
     public void runClickEventCommand(String command, @Nullable Screen afterActionScreen, CallbackInfo ci) {
@@ -37,7 +37,7 @@ public abstract class ClientPlayNetworkHandlerMixin extends ClientCommonNetworkH
                 this.client.setScreen(afterActionScreen);
                 break;
             case PARSE_ERRORS:
-                this.openConfirmRunCommandScreen(command, "multiplayer.confirm_command.parse_errors", afterActionScreen);
+                this.openConfirmCommandScreen(command, "multiplayer.confirm_command.parse_errors", afterActionScreen);
                 break;
         }
         ci.cancel();
